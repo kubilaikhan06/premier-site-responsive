@@ -1,0 +1,281 @@
+body
+{
+    background: url('https://source.unsplash.com/p7nrRdMDebM') no-repeat center;
+    background-size: cover;
+    
+}
+.poste
+{
+    font-size: 2.7em;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 3%;
+    /*text-shadow: 3px 3px 3px grey;*/
+}
+/*titres du bloc main*/
+#formation>header, #expe>header
+{
+    color: white;
+    background: linear-gradient(to left, violet, blue);
+    font-size: 2em;
+    padding-left: 0.5%;
+    /*border: 3px solid red;*/
+    border-radius: 10px;
+}
+#formation table
+{
+    color: yellow;
+}
+
+h2
+{
+    color: blue;
+    background-color: white;
+    font-size: 2em;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#civil p, h1
+{
+     padding-left: 5.5%;
+}
+
+#expe h1>img, #divers h2>img
+{
+    display: none;
+}
+
+/*énumération des expér prof*/
+#expe h1
+{
+    font-size: 1.2em;
+    background-color: #11b7ee;
+    font-weight: normal;
+    border-radius: 5px;
+    padding-left: 0.5%;
+}
+
+/*séparation en 2 parties des expér prof*/
+#expe h1 span: first-of-type
+{
+    display: inline-block; /*nécessaire pour dimensionner*/
+    word-wrap: break-word;
+    width: 40%; /*espacer les 2 parties*/
+}
+
+.intitule
+{
+    margin-left: 7%;
+    font-weight: bold;
+}
+#civil>img
+{
+    display: block;
+    width: 95%;
+    margin: auto;
+    border: 3px solid white;
+    border-radius: 7px;   
+}
+
+/*titre et bloc main à gauche*/
+body>header, main
+{
+    display: block;
+    float: left;
+    width: 76.5%;
+}
+
+/*bloc photo + adresse et divers*/
+#civil, #divers
+{
+    float: right;
+    width: 22.2%;
+    background-color: blue;
+    color: white;
+    padding: 0.5%;
+    opacity: 0.7;
+}
+
+/*diplomes*/
+#formation table th , #formation table td
+{
+    padding-left: 2em;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+/*espace entre 2 formations*/
+#formation table tr: nth-child(2n) td
+{
+    padding-bottom: 1em; /*16px*/
+    
+}
+
+#expe ul
+{
+    margin-left: 6.5%; /*100px/750px;*/
+    color: black;
+    font-weight: bold;
+}
+
+#divers ul
+{
+    list-style: none;
+    padding-left: 7%;
+}
+/*grand écran*/
+@media screen and (min-width: 1200px)
+{
+    body{font-size: 16px;}
+}
+
+/*écran std*/
+@media screen and (min-width: 992px) and (max-width: 1199px)
+{
+    body{font-size: 14px;}
+}
+
+/*petit écran*/
+@media screen and (min-width: 768px) and (max-width: 991px)
+{
+    body{font-size: 12px;}
+}
+/*-----------------------------------------------------*/
+/*-----------format smartphone-------------------------*/
+@media screen and (max-width: 767px)
+{
+    
+    body
+    {
+        font-size: 10px;
+        position: relative; /*pour photo d'identité*/
+       background: none;
+    }
+    
+    /*photo d'identité à droite*/
+    #civil>img
+    {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        display: block;
+        float: right;
+        width: 50%;
+        max-width: 130px;
+        border: 3px solid white;
+        border-radius: 5px;
+        box-shadow: 0 0 3px blue;
+    }
+        
+    main
+    {width: 100%;}
+    
+    #formation header, #expe header
+    {
+        color: white;
+        text-align: center;
+        padding: 5px;
+    }
+    
+    #expe h1>img, #divers h2>img 
+    {display:inherit;}    
+    
+    #civil {background-color: white; width: 100%;}
+        
+    #civil p
+    {
+        color: black; 
+        width: auto;         
+        font-size: 1.3em;    
+    }
+    
+    #civil hr
+    {display: none;}
+    
+    /*titre à gauche*/
+    body>header
+    {
+        display: block;
+        float: left;
+        width: 60%;
+        margin-bottom: 0.5em;
+    }
+    
+    #civil h1
+    {    
+    color: black;
+    background: linear-gradient(to left, orange, red);
+    font-size: 2em;        
+    border-radius: 10px;
+    text-align: left;
+    padding: 5px;
+    }
+    
+    #civil, #divers
+    {
+        opacity: 1;
+    }
+    
+    #formation table
+{
+    color: black;
+}
+    
+    #expe h1
+    {
+        font-size: 1.5em;
+        padding: 5px;
+    }
+    
+    /*bloc divers*/
+    #divers
+    {
+        width: 100%;
+        background-color: blue;
+        color: white;
+        padding: .5em 0.78%;
+        border-radius: 10px;
+    }
+    
+    #divers h2
+    {
+        text-align: center;
+        padding: 3px;
+    }   
+    
+    
+    
+    /*flèche pour détail à la demande*/    
+    #expe h1, #divers h2 {position: relative;}
+    
+    #expe h1 img, #divers h2 img 
+    {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+    }
+    
+    /*affichage à la demande*/
+    #expe h1:hover~ul, #divers h2:hover~ul
+    {display: block;}
+    
+    /*rotation flèche*/
+    #expe h1 img:hover, #divers h2 img:hover
+    {
+        transform: rotate(180deg);
+        transition: transform 0.2s ease-in-out;
+    }  
+    
+    #expe ul
+{
+    padding-left: 0.5%; 
+    color: black;
+}
+    
+    /*énum divers et expé à la demande et positionnés en ligne*/
+    ul{display: none;}
+    ul li {display: inline;}
+    ul li: after {content="-";} /*séparateur*/
+    ul li: last-of-type: after {content: '.';}/*un point après le dernier*/
+}

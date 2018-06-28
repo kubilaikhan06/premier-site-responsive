@@ -1,0 +1,14 @@
+Initiation au langage XML
+
+XML apporte une révolution dans le monde des techniques Internet par sa capacité à décrire les données et non plus la présentation d'un document. Dans la galaxy HTML, XML se distingue par la possibilité de créer ses propres balises.</p>
+Destinée aux analystes-programmeurs et développeurs concernés par l'échange de données informatisées, ce cours vous permettra de lire et de comprendre un document XML, pour pouvoir concevoir à votre tour la description XML de vos documents.</p>
+
+Situer le champs d'intervention du langage XML dans l'ensemble des techniques Internet et d'échanges de données. 
+Comprendre des documents XML existants. 
+Concevoir une document XML valide et bien formé à partir de documents réels. 
+Concevoir le document de validation du document XML créé. 
+
+1500 Euros H.T.
+
+2 jours 
+
