@@ -34,20 +34,21 @@ $(document).ready(function(){
   });
   
   $('#scroller2').click(function() {
-    var images = new Array(image1, image2, image3, image4);
+    /*var image= "image";
+    var ref = "#img";
     for(var i =1; i<5; i++)
     {
-       images[i] = '"$(#img"+i")"'.position().top;
+      const image+i = $('ref+i').position().top;
 
     $('html, body').animate(
       {
-        scrollTop: images[i]
+        scrollTop: images+i
       },
       5000)
     }
-    });
+    });*/
 
-    /*const image1 = $('#img1').position().top;
+    const image1 = $('#img1').position().top;
     
     $('html, body').animate(
       {
@@ -82,7 +83,7 @@ $(document).ready(function(){
       },
       5000
     ); 
-  });*/
+  });
     
     
   /* var image = document.getElementById('blocImages');
