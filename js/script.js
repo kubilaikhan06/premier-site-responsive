@@ -44,28 +44,31 @@ $(document).ready(function(){
       {
         scrollTop: image1
       },
-      5000
+      3000
     )    
-  
+
+    .delay(2000)
     .animate(
       {
         scrollTop: image2
       },
-      5000
+      3000
     )
-    
+
+    .delay(2000)
     .animate(
       {
         scrollTop: image3
       },
-      5000
+      3000
     )
     
+    .delay(2000)
     .animate(
       {
         scrollTop: image4
       },
-      5000
+      3000
     ); 
   });
           
