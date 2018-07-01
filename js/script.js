@@ -34,20 +34,20 @@ $(document).ready(function(){
   });
   
   $('#scroller2').click(function() {
-    /*var listImages = ['img1', 'img2', 'img3', 'img4'];
-    var listRefImg =["$('#img1')", "$('#img2')", "$('#img3')", "$('#img4')"];
-
-    for(var i =0; i<listImages.length; i++)
-    {const listImages[i] = listRefImg[i].position().top;
+    var images = new Array(image1, image2, image3, image4);
+    for(var i =1; i<5; i++)
+    {
+       images[i] = '"$(#img"+i")"'.position().top;
 
     $('html, body').animate(
       {
-        scrollTop: listImages[i]
+        scrollTop: images[i]
       },
-      5000
-    );}*/
+      5000)
+    }
+    });
 
-    const image1 = $('#img1').position().top;
+    /*const image1 = $('#img1').position().top;
     
     $('html, body').animate(
       {
@@ -82,7 +82,7 @@ $(document).ready(function(){
       },
       5000
     ); 
-  });
+  });*/
     
     
   /* var image = document.getElementById('blocImages');
