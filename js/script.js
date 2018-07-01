@@ -49,35 +49,32 @@ $(document).ready(function(){
     });*/
 
     const image1 = $('#img1').position().top;
+    const image2 = $('#img2').position().top;
+    const image3 = $('#img3').position().top;
+    const image4 = $('#img4').position().top;
     
     $('html, body').animate(
       {
         scrollTop: image1
       },
       5000
-    );
-
-    const image2 = $('#img2').position().top;
+    )    
   
-    $('html, body').animate(
+    .animate(
       {
         scrollTop: image2
       },
       5000
-    );
-
-    const image3 = $('#img3').position().top;
-  
-    $('html, body').animate(
+    )
+    
+    .animate(
       {
         scrollTop: image3
       },
       5000
-    );
-
-    const image4 = $('#img4').position().top;
-  
-    $('html, body').animate(
+    )
+    
+    .animate(
       {
         scrollTop: image4
       },
