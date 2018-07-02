@@ -86,8 +86,9 @@ $(document).ready(function(){
   }
           
   // permet d'arrêter l'animation après qu'elle ait été lancée
-  $('#scroller4').click(function(){
+  $('#scroller4').click(stop) ;
+  function stop(){
     $('html, body').stop(true);
-  }) ;
+  }
 
 });
