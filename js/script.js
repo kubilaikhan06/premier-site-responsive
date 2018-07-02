@@ -9,6 +9,7 @@
 $(document).ready(function(){
 
   var jaime = document.querySelector('.jaime');
+  var bool = true;
 
   window.setInterval(function(){
 
@@ -34,7 +35,9 @@ $(document).ready(function(){
   });
   
   $('#scroller2').click(defiler);
-  $('body').keypress(defiler);
+  $('body').keypress(defilerArreter);
+  // permet d'arrêter l'animation après qu'elle ait été lancée
+  $('#scroller4').click(stop) ;
 
   function defiler() {
     
@@ -43,7 +46,6 @@ $(document).ready(function(){
     const image3 = $('#img3').position().top;
     const image4 = $('#img4').position().top;
     const image5 = $('#img5').position().top;
-
     
     $('html, body').animate(
       {
@@ -83,12 +85,24 @@ $(document).ready(function(){
       },
       3000
     ); 
-  }
+    return bool = false;
+  };
           
-  // permet d'arrêter l'animation après qu'elle ait été lancée
-  $('#scroller4').click(stop) ;
+  function defilerArreter(){
+    if(bool==true)
+    {
+      defiler();
+      return bool = false;
+    }
+    else
+    {
+      stop();
+      return bool = true;
+    }
+  }  
+
   function stop(){
     $('html, body').stop(true);
-  }
+  }  
 
 });
