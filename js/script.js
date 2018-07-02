@@ -39,6 +39,8 @@ $(document).ready(function(){
     const image2 = $('#img2').position().top;
     const image3 = $('#img3').position().top;
     const image4 = $('#img4').position().top;
+    const image5 = $('#img5').position().top;
+
     
     $('html, body').animate(
       {
@@ -67,6 +69,14 @@ $(document).ready(function(){
     .animate(
       {
         scrollTop: image4
+      },
+      3000
+    )
+
+    .delay(2000)
+    .animate(
+      {
+        scrollTop: image5
       },
       3000
     ); 
