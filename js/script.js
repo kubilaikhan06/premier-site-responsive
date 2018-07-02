@@ -33,7 +33,10 @@ $(document).ready(function(){
       );
   });
   
-  $('#scroller2').click(function() {
+  $('#scroller2').click(defiler);
+  $('body').keypress(defiler);
+
+  function defiler() {
     
     const image1 = $('#img1').position().top;
     const image2 = $('#img2').position().top;
@@ -80,7 +83,7 @@ $(document).ready(function(){
       },
       3000
     ); 
-  });
+  }
           
   // permet d'arrêter l'animation après qu'elle ait été lancée
   $('#scroller4').click(function(){
