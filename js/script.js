@@ -39,13 +39,25 @@ $(document).ready(function(){
   // permet d'arrêter l'animation après qu'elle ait été lancée
   $('#scroller4').click(stop) ;
 
-  function defiler() {
-    
+  function defiler(){
     const image1 = $('#img1').position().top;
     const image2 = $('#img2').position().top;
     const image3 = $('#img3').position().top;
     const image4 = $('#img4').position().top;
     const image5 = $('#img5').position().top;
+    images = [image1, image2, image3, image4, image5];
+
+    for (i=0; i>images.length; i++)
+    {
+      $('html', 'body').animate(
+        { scrollTop: images[i] },
+        3000
+      )
+    }
+  };  
+
+  /*function defiler() {
+    
     
     $('html, body').animate(
       {
@@ -86,7 +98,7 @@ $(document).ready(function(){
       3000
     ); 
     return bool = false;
-  };
+  };*/
           
   function defilerArreter(){
     if(bool==true)
