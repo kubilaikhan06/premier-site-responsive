@@ -1,4 +1,4 @@
-
+ 
 //var randomColor = '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
 
 /*window.setInterval(function() {
@@ -9,9 +9,9 @@
 $(document).ready(function(){
 
   var jaime = document.querySelector('.jaime');
+  var bool = true;
 
   window.setInterval(function(){
-
     randomColor = '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
     $('#haut').css({
       'background-color' : randomColor,
@@ -32,8 +32,14 @@ $(document).ready(function(){
         1500
       );
   });
-  
-  $('#scroller2').click(function() {
+  // lancer le défilement avec clic sur bouton défiler
+  $('#scroller2').click(defiler);
+  // lancer ou arrêter le défilement avec appui touche clavier
+  $('body').keypress(defilerArreter);
+  // permet d'arrêter l'animation après qu'elle ait été lancée
+  $('#scroller4').click(stop) ;
+
+  function defiler(){
     
     const image1 = $('#img1').position().top;
     const image2 = $('#img2').position().top;
@@ -70,11 +76,24 @@ $(document).ready(function(){
       },
       3000
     ); 
-  });
-          
-  // permet d'arrêter l'animation après qu'elle ait été lancée
-  $('#scroller4').click(function(){
+    return bool = false;
+  };        
+  
+  function defilerArreter(){
+    if(bool==true)
+    {
+      defiler();
+      return bool = false;
+    }
+    else
+    {
+      stop();
+      return bool = true;
+    }
+  } 
+  
+  function stop(){
     $('html, body').stop(true);
-  }) ;
+  };
 
 });
