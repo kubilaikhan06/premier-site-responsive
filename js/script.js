@@ -10,7 +10,7 @@ $(document).ready(function(){
 
   var jaime = document.querySelector('.jaime');
   var bool = true;
-
+  //fonction pour alterner de façon aléatoire le couleur de fond du haut de page et des éléments sous les images
   window.setInterval(function(){
     randomColor = '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
     $('#haut').css({
@@ -20,7 +20,7 @@ $(document).ready(function(){
       'background-color' : randomColor,
     });
   }, 2000);
-
+  // fonction pour descendre/scroller en bas de page jusqu'à la partie contact de la page
   $('#scroller1').click(function() {
     
       const images = $('#contact').position().top;
@@ -32,6 +32,7 @@ $(document).ready(function(){
         1500
       );
   });
+
   // lancer le défilement avec clic sur bouton défiler
   $('#scroller2').click(defiler);
   // lancer ou arrêter le défilement avec appui touche clavier
@@ -56,12 +57,12 @@ $(document).ready(function(){
     return boll = false;
   }; */
 
-  function defiler(){
-    
+  function defiler() {  
     const image1 = $('#img1').position().top;
     const image2 = $('#img2').position().top;
     const image3 = $('#img3').position().top;
-    const image4 = $('#img4').position().top;
+    const image4 = $('#img4').position().top;  
+    const image5 = $('#img5').position().top; 
     
     $('html, body').animate(
       {
@@ -89,10 +90,17 @@ $(document).ready(function(){
         scrollTop: image4
       },
       3000
-    ); 
+    )
+    .delay(2000)
+    .animate(
+      {
+        scrollTop: image5
+      },
+      3000
+    );
     return bool = false;
-  }; 
-  
+  };
+          
   function defilerArreter(){
     if(bool==true)
     {
