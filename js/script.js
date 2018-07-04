@@ -39,6 +39,23 @@ $(document).ready(function(){
   // permet d'arrêter l'animation après qu'elle ait été lancée
   $('#scroller4').click(stop) ;
 
+  /*function defiler(){
+    const image1 = $('#img1').position().top;
+    const image2 = $('#img2').position().top;
+    const image3 = $('#img3').position().top;
+    const image4 = $('#img4').position().top;
+    images = [image1, image2, image3, image4];
+
+    for (i=0; i>images.length; i++)
+    {
+      $('html, body').animate(
+        { scrollTop: images[i] },
+        3000
+      )
+    }
+    return boll = false;
+  }; */
+
   function defiler(){
     
     const image1 = $('#img1').position().top;
@@ -52,7 +69,6 @@ $(document).ready(function(){
       },
       3000
     )    
-
     .delay(2000)
     .animate(
       {
@@ -60,15 +76,13 @@ $(document).ready(function(){
       },
       3000
     )
-
     .delay(2000)
     .animate(
       {
         scrollTop: image3
       },
       3000
-    )
-    
+    )    
     .delay(2000)
     .animate(
       {
@@ -77,7 +91,7 @@ $(document).ready(function(){
       3000
     ); 
     return bool = false;
-  };        
+  }; 
   
   function defilerArreter(){
     if(bool==true)
@@ -94,6 +108,7 @@ $(document).ready(function(){
   
   function stop(){
     $('html, body').stop(true);
+    return bool = true;
   };
 
 });
