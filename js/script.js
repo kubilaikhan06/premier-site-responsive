@@ -42,7 +42,7 @@ $(document).ready(function(){
   //arrêt défilement et remontée haut de page par double-clic
   $('body').dblclick(stopRemonte);
 
-  /*function defiler(){
+  function defiler(){
     const image1 = $('#img1').position().top;
     const image2 = $('#img2').position().top;
     const image3 = $('#img3').position().top;
@@ -58,9 +58,9 @@ $(document).ready(function(){
       )
     }
     return boll = false;
-  };*/ 
+  };
 
-  function defiler() {  
+  /*function defiler() {  
     const image1 = $('#img1').position().top;
     const image2 = $('#img2').position().top;
     const image3 = $('#img3').position().top;
@@ -102,7 +102,7 @@ $(document).ready(function(){
       3000
     );
     return bool = false;
-  };
+  };*/
           
   function defilerArreter(){
     if(bool==true)
