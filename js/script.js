@@ -43,7 +43,7 @@ $(document).ready(function(){
   $('body').dblclick(stopRemonte);
 
   function defiler(){
-    const image1 = $('#img1').position().top;
+    /*const image1 = $('#img1').position().top;
     const image2 = $('#img2').position().top;
     const image3 = $('#img3').position().top;
     const image4 = $('#img4').position().top;
@@ -58,8 +58,15 @@ $(document).ready(function(){
         3000
       ).delay(1500);
     }
-    return bool = false;
-
+    return bool = false;*/
+    $('#img1').fadeOut(3000)
+      .queue(function(){
+        $(this).show(image.src = "https://source.unsplash.com/pikyGuAmwpM/1288x720").dequeue()        
+      })
+      .fadeIn(3000)
+      .queue(function(){
+        $(this).show(image.src = "https://source.unsplash.com/9LX2k0pD5nE/1288x720/").dequeue()        
+      });
   };
           
   function defilerArreter(){
