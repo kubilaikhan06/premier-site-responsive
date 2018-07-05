@@ -55,7 +55,7 @@ $(document).ready(function(){
       $('html, body').animate(
         { scrollTop: images[i] },
         3000
-      )
+      ).delay(1500);
     }
     return boll = false;
 
