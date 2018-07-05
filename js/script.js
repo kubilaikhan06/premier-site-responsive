@@ -43,30 +43,49 @@ $(document).ready(function(){
   $('body').dblclick(stopRemonte);
 
   function defiler(){
-    /*const image1 = $('#img1').position().top;
-    const image2 = $('#img2').position().top;
-    const image3 = $('#img3').position().top;
-    const image4 = $('#img4').position().top;
-    const image5 = $('#img5').position().top;
-    const image6 = $('#img6').position().top;
-    var images = new Array (image1, image2, image3, image4, image5, image6);
+    const image1 = $('#img1').position().top;
+    var image = document.querySelector('#img1');
+    
+    $('html, body').animate(
+      { scrollTop: image1},2000);
 
-    for (i=0; i<images.length; i++)
-    {
-      $('html, body').animate(
-        { scrollTop: images[i] },
-        3000
-      ).delay(1500);
-    }
-    return bool = false;*/
-    $('#img1').fadeOut(3000)
+    $('#img1')
+      .delay(2000)
+      .fadeOut(3000)    
       .queue(function(){
-        $(this).show(image.src = "https://source.unsplash.com/pikyGuAmwpM/1288x720").dequeue()        
-      })
+        $(this).show(image.src = "https://source.unsplash.com/9LX2k0pD5nE/1288x720/").dequeue()                          
+        })
       .fadeIn(3000)
+
+      .delay(500)
+      .fadeOut(3000)    
       .queue(function(){
-        $(this).show(image.src = "https://source.unsplash.com/9LX2k0pD5nE/1288x720/").dequeue()        
-      });
+        $(this).show(image.src = "https://source.unsplash.com/pikyGuAmwpM/1288x720").dequeue()                          
+        })
+      .fadeIn(3000)
+
+      .delay(500)
+      .fadeOut(3000)    
+      .queue(function(){
+        $(this).show(image.src = "https://source.unsplash.com/5Xwaj9gaR0g/1288x720").dequeue()                          
+        })
+      .fadeIn(3000)
+
+      .delay(500)
+      .fadeOut(3000)    
+      .queue(function(){
+        $(this).show(image.src = "https://source.unsplash.com/mwhklqGVzck/1288x720/").dequeue()                          
+        })
+      .fadeIn(3000)
+
+      .delay(500)
+      .fadeOut(3000)    
+      .queue(function(){
+        $(this).show(image.src = "https://source.unsplash.com/EDfZ0Sjmp_w/1288x720/").dequeue()                          
+        })
+      .fadeIn(3000);
+
+      return bool = false;
   };
           
   function defilerArreter(){
