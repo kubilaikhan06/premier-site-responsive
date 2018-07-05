@@ -44,9 +44,31 @@ $(document).ready(function(){
 
   function defiler(){
     const image1 = $('#img1').position().top;
-    var image = document.querySelector('#img1');
-    
+    //var image = document.querySelector('#img1');
+
+    var image1 = $('#img1').src = "https://source.unsplash.com/9LX2k0pD5nE/1288x720/";
+    var image2 = $('#img1').src = "https://source.unsplash.com/pikyGuAmwpM/1288x720/";
+    var image3 = $('#img1').src = "https://source.unsplash.com/5Xwaj9gaR0g/1288x720/";
+    var image4 = $('#img1').src = "https://source.unsplash.com/mwhklqGVzck/1288x720/";
+    var image5 = $('#img1').src = "https://source.unsplash.com/EDfZ0Sjmp_w/1288x720/";
+    var images = [image1, image2, image3, image4, image5];
+
     $('html, body').animate(
+      { scrollTop: image1},2000);
+
+    for(i = 0; i<images.length; i++)
+    {
+      $('#img1')
+      .delay(2000)
+      .fadeOut(3000)    
+      .queue(function(){
+        $(this).show(images[i]).dequeue()                          
+        })
+      .fadeIn(3000);
+    }   
+    
+    
+    /*$('html, body').animate(
       { scrollTop: image1},2000);
 
     $('#img1')
@@ -83,7 +105,7 @@ $(document).ready(function(){
       .queue(function(){
         $(this).show(image.src = "https://source.unsplash.com/EDfZ0Sjmp_w/1288x720/").dequeue()                          
         })
-      .fadeIn(3000);
+      .fadeIn(3000);*/
 
       return bool = false;
   };
