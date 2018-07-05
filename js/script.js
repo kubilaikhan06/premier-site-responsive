@@ -58,7 +58,7 @@ $(document).ready(function(){
         3000
       ).delay(1500);
     }
-    return boll = false;
+    return bool = false;
 
   };
           
