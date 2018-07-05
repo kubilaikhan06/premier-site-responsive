@@ -51,14 +51,14 @@ $(document).ready(function(){
     images = [image1, image2, image3, image4, image5];
 
     for (i=0; i>images.length; i++)
-    {
+    {      
       $('html, body').animate(
         { scrollTop: images[i] },
         3000
       )
     }
     return boll = false;
-  };*/ 
+  };*/
 
   function defiler() {  
     const image1 = $('#img1').position().top;
