@@ -45,7 +45,8 @@ $(document).ready(function(){
     const image2 = $('#img2').position().top;
     const image3 = $('#img3').position().top;
     const image4 = $('#img4').position().top;
-    images = [image1, image2, image3, image4];
+    const image5 = $('#img5').position().top;
+    images = [image1, image2, image3, image4, image5];
 
     for (i=0; i>images.length; i++)
     {
@@ -55,7 +56,7 @@ $(document).ready(function(){
       )
     }
     return boll = false;
-  }; */
+  };*/ 
 
   function defiler() {  
     const image1 = $('#img1').position().top;
