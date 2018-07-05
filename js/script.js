@@ -39,6 +39,8 @@ $(document).ready(function(){
   $('body').keypress(defilerArreter);
   // permet d'arrêter l'animation après qu'elle ait été lancée
   $('#scroller4').click(stop) ;
+  //arrêt défilement et remontée haut de page par double-clic
+  $('body').dblclick(stopRemonte);
 
   /*function defiler(){
     const image1 = $('#img1').position().top;
@@ -118,6 +120,17 @@ $(document).ready(function(){
   function stop(){
     $('html, body').stop(true);
     return bool = true;
+  };
+
+  function stopRemonte(){
+    $('html, body').stop(true);
+    const images = $('#haut').position().top;    
+      $('html, body').animate(
+        {
+          scrollTop: images
+        },
+        500
+      );
   };
 
 });
