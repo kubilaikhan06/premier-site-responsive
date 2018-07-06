@@ -46,34 +46,28 @@ $(document).ready(function(){
     const image1 = $('#img1').position().top;
     var image = document.querySelector('#img1');
 
-    var image2 = "https://source.unsplash.com/9LX2k0pD5nE/1288x720/";
-    var image3 = "https://source.unsplash.com/pikyGuAmwpM/1288x720/";
-    var image4 = "https://source.unsplash.com/5Xwaj9gaR0g/1288x720/";
-    var image5 = "https://source.unsplash.com/mwhklqGVzck/1288x720/";
-    var image6 = "https://source.unsplash.com/EDfZ0Sjmp_w/1288x720/";
-    var images = [image2];
+    const image2 = "https://source.unsplash.com/9LX2k0pD5nE/1288x720/";
+    const image3 = "https://source.unsplash.com/pikyGuAmwpM/1288x720/";
+    const image4 = "https://source.unsplash.com/5Xwaj9gaR0g/1288x720/";
+    const image5 = "https://source.unsplash.com/mwhklqGVzck/1288x720/";
+    const image6 = "https://source.unsplash.com/EDfZ0Sjmp_w/1288x720/";
+    var images = [image2, image3, image4, image5, image6];
+
+    images.push("https://source.unsplash.com/Dksk8szLRN0/1288x720/");
 
     $('html, body').animate(
       { scrollTop: image1},2000);
 
-    /*$('#img1')
-    .delay(2000)
-    .fadeOut(3000)    
-    .queue(function(){
-      $(this).show(image.src = image2).dequeue()                          
-      })
-    .fadeIn(3000);*/
-    for (i=0; i<images.length; i++)
+    for (const el of images)
     {
       $('#img1')
       .delay(2000)
       .fadeOut(3000)    
       .queue(function(){
-        $(this).show(image.src = images[i]).dequeue()                          
+        $(this).show(image.src = el).dequeue()                          
         })
       .fadeIn(3000);
-    };
-    
+    }
     
     /*$('html, body').animate(
       { scrollTop: image1},2000);
