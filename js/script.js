@@ -35,6 +35,7 @@ $(document).ready(function(){
 
   // lancer le défilement avec clic sur bouton défiler
   $('#scroller2').click(defiler);
+  $('#img1').click(defiler);
   // lancer ou arrêter le défilement avec appui touche clavier
   $('body').keypress(defilerArreter);
   // permet d'arrêter l'animation après qu'elle ait été lancée
@@ -100,7 +101,7 @@ $(document).ready(function(){
   } 
   
   function stop(){
-    $('html, body').stop(true);
+    $('#img1').stop(true);
     return bool = true;
   };
 
