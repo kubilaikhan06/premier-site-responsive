@@ -46,15 +46,20 @@ $(document).ready(function(){
     const image1 = $('#images').position().top;
     var image = document.querySelector('#img1');
 
-    const image2 = "https://source.unsplash.com/9LX2k0pD5nE/1288x720/";
-    const image3 = "https://source.unsplash.com/pikyGuAmwpM/1288x720/";
-    const image4 = "https://source.unsplash.com/5Xwaj9gaR0g/1288x720/";
-    const image5 = "https://source.unsplash.com/mwhklqGVzck/1288x720/";
-    const image6 = "https://source.unsplash.com/EDfZ0Sjmp_w/1288x720/";
-    var images = [image2, image3, image4, image5, image6];
+    const image2 = "lucas/lucas2.jpg";
+    const image3 = "lucas/lucas3.jpg";
+    const image4 = "lucas/lucas4.jpg";
+    const image5 = "lucas/lucas5.jpg";
+    const image6 = "lucas/lucas6.jpg";
+    const image7 = "lucas/lucas7.jpg";
+    const image8 = "lucas/lucas8.jpg";
+    const image9 = "lucas/lucas9.jpg";
+    const image10 = "lucas/lucas10.jpg";
+    const image11= "lucas/lucas11.jpg";
+    
+    var images = [image2, image3, image4, image5, image6, image7, image8, image9, image10, image11];
 
-    images.push("https://source.unsplash.com/Dksk8szLRN0/1288x720/");
-    images.push("https://source.unsplash.com/CN6XuY7sz_4/1288x720/");
+    images.push("lucas/lucas12.jpg");
 
     /*$('html, body').animate(
       { scrollTop: image1},2000);
