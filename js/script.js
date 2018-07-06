@@ -49,7 +49,7 @@ $(document).ready(function(){
     const image4 = $('#img4').position().top;
     const image5 = $('#img5').position().top;
     const image6 = $('#img6').position().top;
-    var images = new Array (image1, image2, image3, image4, image5, image6);
+    var images = [image1, image2, image3, image4, image5, image6];
 
     for (i=0; i<images.length; i++)
     {
