@@ -54,6 +54,7 @@ $(document).ready(function(){
     var images = [image2, image3, image4, image5, image6];
 
     images.push("https://source.unsplash.com/Dksk8szLRN0/1288x720/");
+    images.push("https://source.unsplash.com/CN6XuY7sz_4/1288x720/");
 
     /*$('html, body').animate(
       { scrollTop: image1},2000);
