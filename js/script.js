@@ -106,14 +106,15 @@ $(document).ready(function(){
   };
 
   function stopRemonte(){
-    $('html, body').stop(true);
+    $('#img1').stop(true);
     const images = $('#haut').position().top;    
       $('html, body').animate(
         {
           scrollTop: images
         },
-        500
+        300
       );
+      return bool = true;
   };
 
 });
